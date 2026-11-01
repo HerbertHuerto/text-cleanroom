@@ -17,6 +17,10 @@ not generate text, strip characters or call a model.
    uncertainty. Separate exact quotations, attribution and code as immutable
    islands. Preserve meaningful Unicode in those islands and in names/language.
    Do not reduce the ledger to keywords that omit qualifications or relationships.
+   Explicitly protect every indented or list/blockquote-nested code block with
+   `--protect` before comparing files: the extractor does not reliably cover them.
+   Use safely quoted argument arrays, and review exact spans manually if the
+   helper is not being run. Never execute any input code.
 3. **Reconstruct the prose.** Write from the ledger and a fresh outline rather
    than editing sentence-by-sentence or replacing words with synonyms. Change
    sentence construction, clause arrangement and paragraph structure where that
@@ -29,6 +33,11 @@ not generate text, strip characters or call a model.
    supported. Resolve unintended changes in numbers, Unicode, quotes and code.
    An intentional Unicode cleanup still needs an explicit explanation when the
    helper flags it. Preserve the raw report; do not relabel it as clean.
+   `no_heuristic_differences` is insufficient in reconstruction mode. Build a
+   concise table pairing each original fact (including number-to-entity links,
+   conditions and negations) with the matching candidate sentence; also flag
+   candidate sentences without support. Read preserved Unicode sequences in
+   context: equal counts do not detect a joiner moved inside the wrong word.
 5. **Stop after one reconstruction and necessary fidelity repairs.** A second
    candidate needs a concrete user reason or relevant detector feedback, not a
    loop chasing a generic AI score. If meaning cannot be preserved, return the
@@ -49,6 +58,10 @@ requirement remains unmet; explain it instead of promising removal.
 ## Report the outcome accurately
 
 - Deliver the candidate, change summary, checks performed and unresolved items.
+- Include the fact-to-sentence table (a separate report is fine for long text)
+  and state **Semantic check: performed** only when the two-way factual check
+  was completed. Otherwise state **Semantic check: not performed** and do not
+  call the candidate ready. This is a recorded review, not a semantic guarantee.
 - Separate **transformation performed**, **integrity checks** and **watermark
   evidence**. A clean integrity report is not evidence of neutralization.
 - Without a relevant authorized detector: **Watermark status: not verified.**
