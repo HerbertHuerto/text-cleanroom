@@ -15,8 +15,8 @@ import unicodedata
 MAX_BYTES = 1024 * 1024
 MAX_ITEMS = 100
 MAX_DIFF_LINES = 200
-NUMBER = re.compile(r"\d+(?:[.,:/-]\d+)*")
-URL = re.compile(r'https?://[^\s<>"`]+')
+NUMBER = re.compile(r"[-+\u2212]?\d+(?:[.,:/-]\d+)*")
+URL = re.compile(r'https?://[^\s<>"`]+', re.IGNORECASE)
 
 
 def read_text(path):

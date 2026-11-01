@@ -49,6 +49,15 @@ class TextChecks(unittest.TestCase):
         self.assertEqual(report["semantic_equivalence"], "not_verified")
         self.assertTrue(report["diff"])
 
+    def test_sign_changes_and_uppercase_url_schemes_are_reported(self):
+        for before, after in [
+            ("Balance -10", "Balance 10"),
+            ("Balance −10", "Balance +10"),
+            ("HTTPS://example.org/a", "HTTPS://other.example/a"),
+        ]:
+            with self.subTest(before=before):
+                self.assertEqual(checks.compare_text(before, after, [])["status"], "requires_review")
+
     def test_attribution_and_code_can_be_protected_explicitly(self):
         for phrase in ["Written by Jane Doe", "Made by local artisans", "`print(42)`"]:
             with self.subTest(phrase=phrase):
