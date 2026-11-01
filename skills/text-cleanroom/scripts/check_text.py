@@ -15,7 +15,7 @@ import unicodedata
 MAX_BYTES = 1024 * 1024
 MAX_ITEMS = 100
 MAX_DIFF_LINES = 200
-NUMBER = re.compile(r"[-+\u2212]?\d+(?:[.,:/-]\d+)*")
+NUMBER = re.compile(r"[-+\u2212]?(?:\d+(?:[.,:/-]\d+)*|[.,]\d+)(?:[eE][-+]?\d+)?")
 URL = re.compile(r'https?://[^\s<>"`]+', re.IGNORECASE)
 
 

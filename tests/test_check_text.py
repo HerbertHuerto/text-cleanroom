@@ -53,6 +53,10 @@ class TextChecks(unittest.TestCase):
         for before, after in [
             ("Balance -10", "Balance 10"),
             ("Balance −10", "Balance +10"),
+            ("Balance -.5", "Balance .5"),
+            ("Balance −,5", "Balance +,5"),
+            ("Fraction .5", "Integer 5"),
+            ("Value 1e-3", "Value 1e3"),
             ("HTTPS://example.org/a", "HTTPS://other.example/a"),
         ]:
             with self.subTest(before=before):
