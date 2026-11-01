@@ -1,6 +1,6 @@
 ---
 name: text-cleanroom
-description: Inspect and conservatively clean selected plain text or Markdown, or rewrite prose with explicit invariant checks. Use for Unicode hygiene and reviewable editorial cleanup, not watermark certification, code refactoring, or binary document conversion.
+description: Attempt text-watermark neutralization through meaning-preserving prose reconstruction, or inspect and conservatively clean selected plain text/Markdown. Includes integrity checks, not a watermark detector or removal guarantee. Not for code refactoring or binary document conversion.
 license: MIT-0
 metadata:
   openclaw:
@@ -10,7 +10,8 @@ metadata:
 
 # Text Cleanroom
 
-Make edits reviewable without pretending that cleaner prose proves human authorship
+Attempt the requested text transformation while preserving content and making
+changes reviewable. Cleaner or rewritten prose does not prove human authorship
 or absence of a statistical watermark. Work only on the user's selected text.
 
 ## Choose the operation
@@ -20,10 +21,17 @@ or absence of a statistical watermark. Work only on the user's selected text.
   formatting issues, not wording or meaning.
 - **Rewrite** only when requested. Preserve the user's tone, language and meaning;
   do not add claims, change uncertainty into certainty, or remove attribution.
+- **Neutralize (experimental)** when the user asks to remove or disrupt a text
+  watermark. Perform the concrete reconstruction workflow in
+  [references/neutralize.md](references/neutralize.md), not just an inspection.
+  This request authorizes a meaning-preserving rewrite, not provider switching,
+  deletion of attribution or changes to protected content. If verbatim fidelity
+  is also required, explain the conflict before rewriting.
 
-A request to remove an AI watermark is not proof that one exists. Explain that
-Unicode cleanup does not remove statistical watermarks. If the user wants a
-rewrite, provide one with the verification limits below, not a removal guarantee.
+A request to remove an AI watermark is not proof that one exists. Distinguish
+Unicode cleanup from an attempt to disrupt statistical patterns through rewriting.
+Carry out the attempt when requested; missing detection limits the conclusion,
+not permission to produce a candidate. Do not substitute a generic editing task.
 
 ## Preserve the material
 
@@ -51,6 +59,9 @@ video. Markdown containing embedded code is supported only with code left intact
 
 Resolve `scripts/check_text.py` relative to this skill directory, not the working
 directory. Use an available Python 3.10+ interpreter (`python3`, or `python`).
+Check the chosen interpreter first with
+`python3 -c 'import sys; assert sys.version_info >= (3, 10)'`
+(substitute `python` only if that is the available command).
 The helper reads UTF-8 `.txt`, `.md` or `.markdown` regular files, up to 1 MiB each.
 It does not modify files, run input content or make network calls.
 
@@ -66,13 +77,22 @@ quotes and code. Do not save pasted text to disk just to run the helper unless a
 local artifact is appropriate to the request; otherwise compare in context and
 say the automated checks were not run.
 
-The helper checks numeric and URL token counts and explicit protected phrases;
-it does **not** parse Markdown or recognize all names, dates, code, units or claims.
-Token counts ignore order and relationships: swapped prices can pass. Inspect
-the actual diff and compare facts in context, including negation and uncertainty.
-Exit 0 means only that the executed heuristic checks found no differences;
-exit 1 reports differences, and exit 2 is an input/usage error. An inspection
-lists characters for review, not an accusation that they are malicious or AI-made.
+The helper compares numeric/URL token counts, explicit protected phrases,
+review-listed Unicode codepoint counts, and exact recognized code regions.
+Its code extractor handles top-level backtick/tilde fences (0–3 leading spaces)
+and matched inline backtick spans. It is **not a complete Markdown parser**:
+indented, list/blockquote-nested code and other embedded syntaxes need manual
+review or explicit protection. It does not recognize all names, units or claims.
+Counts ignore order, position and relationships: moved joiners, swapped code
+regions or prices can pass. URL punctuation/case differences may over-report.
+Inspect the actual diff and compare facts, negation and uncertainty in context.
+
+Read valid JSON and its `status`, not just the process exit code. `inspect`
+returns `inspection_only`. `compare` returns `no_heuristic_differences` (exit 0)
+or `requires_review` (exit 1); neither means semantic or watermark verification.
+Exit 2 is input/usage failure. Missing/invalid JSON, interpreter errors or an
+unknown status mean the check failed to run; never interpret those as approval.
+Inspection lists characters for review, not proof of hidden data or AI authorship.
 
 ## Deliver
 
