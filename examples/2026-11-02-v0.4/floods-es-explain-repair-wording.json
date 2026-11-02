@@ -1,0 +1,59 @@
+{
+  "status": "wording_diagnostics_only",
+  "watermark_status": "not_verified",
+  "semantic_equivalence": "not_verified",
+  "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+  "candidate_sha256": "5495648054caaa5b08ba27c447f500cf63bf31c25db4d504af8f9d36dc295862",
+  "normalization": "unicode_word_regex_casefold_punctuation_ignored",
+  "editable_words": {
+    "original": 151,
+    "candidate": 165
+  },
+  "protected_characters": {
+    "original": 233,
+    "candidate": 233
+  },
+  "protected_fraction_original": 0.18943089430894308,
+  "editable_word_count_ratio": 1.0927152317880795,
+  "unchanged_editable_word_sequence": false,
+  "shared_windows": {
+    "3": {
+      "original_unique": 121,
+      "candidate_unique": 132,
+      "shared_unique": 36,
+      "original_retained_fraction": 0.2975206611570248,
+      "candidate_copied_fraction": 0.2727272727272727
+    },
+    "5": {
+      "original_unique": 101,
+      "candidate_unique": 114,
+      "shared_unique": 15,
+      "original_retained_fraction": 0.1485148514851485,
+      "candidate_copied_fraction": 0.13157894736842105
+    },
+    "8": {
+      "original_unique": 77,
+      "candidate_unique": 83,
+      "shared_unique": 1,
+      "original_retained_fraction": 0.012987012987012988,
+      "candidate_copied_fraction": 0.012048192771084338
+    }
+  },
+  "longest_copied_editable_run": {
+    "words": 8,
+    "original_range": [
+      595,
+      643
+    ],
+    "candidate_range": [
+      533,
+      581
+    ],
+    "excerpt": "millones de euros de fondos de cohesión mediante",
+    "excerpt_truncated": false
+  },
+  "warnings": [
+    "word_units_are_not_model_tokens",
+    "no_validated_removal_threshold"
+  ]
+}

@@ -45,6 +45,11 @@ class ReconstructionTests(unittest.TestCase):
                              "candidate": self.candidate, "fact_map": [
                                  {"fact_id": "F1", "candidate_quote": "Ada pays 20."},
                                  {"fact_id": "F2", "candidate_quote": "Use `--dry-run`."}]})}]}]}
+        self.islands = reconstruct.freeze(self.original.read_text(), self.ledger["immutable"])
+        raw = self.response["output"][0]["content"][0]["text"]
+        for island in self.islands:
+            raw = raw.replace(island["text"], island["placeholder"])
+        self.response["output"][0]["content"][0]["text"] = raw
         self.save()
 
     def save(self):
@@ -150,6 +155,11 @@ class ReconstructionTests(unittest.TestCase):
         self.assertEqual(result["status"], "candidate_requires_review")
         self.assertEqual(result["semantic_check"], "not_performed")
         self.assertEqual(result["watermark_status"], "not_verified")
+        self.assertEqual(result["immutable_handling"], "local_exact_reinsertion")
+        self.assertEqual(result["strategy"], "restructure")
+        diagnostic = json.loads((self.root / "output/transformation.json").read_text())
+        self.assertEqual(diagnostic["status"], "wording_diagnostics_only")
+        self.assertNotIn("[[TCI:", (self.root / "output/fact-map.json").read_text())
         if os.name == "posix":
             self.assertEqual(stat.S_IMODE((self.root / "output").stat().st_mode), 0o700)
             for path in (self.root / "output").iterdir():
@@ -170,13 +180,32 @@ class ReconstructionTests(unittest.TestCase):
         self.assertFalse((self.root / "output/candidate.md").exists())
         self.assertFalse(json.loads((self.root / "output/failure.json").read_text())["candidate_ready"])
 
-    def test_changed_code_is_saved_as_flagged_candidate_not_verified(self):
+    def test_missing_code_placeholder_fails_without_deliverable(self):
         response = copy.deepcopy(self.response)
-        response["output"][0]["content"][0]["text"] = response["output"][0]["content"][0]["text"].replace("--dry-run", "--force")
+        response["output"][0]["content"][0]["text"] = response["output"][0]["content"][0]["text"].replace(self.islands[1]["placeholder"], "--force")
         with mock.patch.dict(os.environ, {"TC_TEST_API_KEY": "sk-proj-test-placeholder"}), \
                 mock.patch.object(reconstruct, "api_call", return_value=(response, {})):
-            self.run_candidate()
-        self.assertEqual(json.loads((self.root / "output/integrity.json").read_text())["status"], "requires_review")
+            with self.assertRaises(ValueError):
+                self.run_candidate()
+        self.assertFalse((self.root / "output/candidate.md").exists())
+
+    def test_strategy_and_marker_collisions_rejected_before_network(self):
+        with self.assertRaises(ValueError):
+            reconstruct.ledger_input(self.root / "ledger.json", self.original.read_text(), self.original_hash, "unknown")
+        self.ledger["facts"][0]["text"] = "[[TCI:spoof]]"
+        self.save()
+        with mock.patch.object(reconstruct, "api_call") as call, self.assertRaises(ValueError):
+            self.run_candidate(True)
+        call.assert_not_called()
+
+    def test_explain_strategy_is_explicit_and_no_extra_request(self):
+        with mock.patch.dict(os.environ, {"TC_TEST_API_KEY": "sk-proj-test-placeholder"}), \
+                mock.patch.object(reconstruct, "api_call", return_value=(self.response, {})) as call:
+            result = reconstruct.run(self.original, self.root / "ledger.json", self.root / "route.json",
+                                     self.root / "explain", strategy="explain")
+        self.assertEqual(call.call_count, 1)
+        self.assertEqual(call.call_args.args[1]["strategy"], reconstruct.STRATEGIES["explain"])
+        self.assertEqual(result["strategy"], "explain")
 
     def test_truncation_refusal_and_incomplete_fact_map_rejected(self):
         bad = [dict(self.response, status="incomplete"),

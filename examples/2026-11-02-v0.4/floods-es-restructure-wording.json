@@ -1,0 +1,59 @@
+{
+  "status": "wording_diagnostics_only",
+  "watermark_status": "not_verified",
+  "semantic_equivalence": "not_verified",
+  "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+  "candidate_sha256": "c69b6af23f76d6ae38d26096e27f37c508463cfe6898f1ca6e3af5809363dd34",
+  "normalization": "unicode_word_regex_casefold_punctuation_ignored",
+  "editable_words": {
+    "original": 151,
+    "candidate": 155
+  },
+  "protected_characters": {
+    "original": 233,
+    "candidate": 237
+  },
+  "protected_fraction_original": 0.18943089430894308,
+  "editable_word_count_ratio": 1.0264900662251655,
+  "unchanged_editable_word_sequence": false,
+  "shared_windows": {
+    "3": {
+      "original_unique": 121,
+      "candidate_unique": 125,
+      "shared_unique": 45,
+      "original_retained_fraction": 0.371900826446281,
+      "candidate_copied_fraction": 0.36
+    },
+    "5": {
+      "original_unique": 101,
+      "candidate_unique": 104,
+      "shared_unique": 20,
+      "original_retained_fraction": 0.19801980198019803,
+      "candidate_copied_fraction": 0.19230769230769232
+    },
+    "8": {
+      "original_unique": 77,
+      "candidate_unique": 78,
+      "shared_unique": 5,
+      "original_retained_fraction": 0.06493506493506493,
+      "candidate_copied_fraction": 0.0641025641025641
+    }
+  },
+  "longest_copied_editable_run": {
+    "words": 9,
+    "original_range": [
+      167,
+      232
+    ],
+    "candidate_range": [
+      148,
+      213
+    ],
+    "excerpt": "muertes y una extensa destrucción de infraestructuras. Se trataba",
+    "excerpt_truncated": false
+  },
+  "warnings": [
+    "word_units_are_not_model_tokens",
+    "no_validated_removal_threshold"
+  ]
+}

@@ -77,6 +77,8 @@ Prepare the ledger described in [neutralize.md](neutralize.md), then run:
 ```sh
 python3 /path/to/text-cleanroom/scripts/reconstruct.py original.md --ledger ledger.json --route route.json --out new-run --dry-run
 python3 /path/to/text-cleanroom/scripts/reconstruct.py original.md --ledger ledger.json --route route.json --out new-run
+# Optional independent alternative, only within the authorized generation budget:
+python3 /path/to/text-cleanroom/scripts/reconstruct.py original.md --ledger ledger.json --route route.json --out alternative-run --strategy explain
 ```
 
 Preflight validates files/settings without a network call; it does not test the
@@ -92,7 +94,12 @@ The output directory must not exist. On POSIX it is created as 0700, with files
 Only the ledger and protected strings are sent, not the full original or agent
 history. Those can still contain sensitive information. Network errors fail closed.
 
-Outputs: `candidate.md`, `receipt.json`, `integrity.json`, `fact-map.json`.
+Outputs: `candidate.md`, `receipt.json`, `integrity.json`, `fact-map.json`,
+`transformation.json`, `ledger-wording.json`. Preflight includes ledger-copying
+diagnostics so copied source sentences can be identified before a paid request.
+Immutable fragments are shown to the API with placeholders
+for context, not hidden from the provider; the runner requires each placeholder
+once and restores the fragment locally. Marker errors fail, not silently repair.
 Exit 0 = preflight only; exit 1 = candidate generated, **review still required**;
 exit 2 = failed. Read the JSON status, not the exit code alone. `failure.json`
 means the run failed; never deliver partial files as ready. A flagged integrity

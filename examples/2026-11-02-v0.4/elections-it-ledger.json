@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "original_sha256": "0e9103b62fcaafd4ca3a307a7a90fde573e230770cf0ea45544d03858a7b34f0",
+  "language": "Italian",
+  "tone": "Neutral historical retrospective; preserve all detail, qualifications and register. Not present-day advice or a current status update.",
+  "facts": [
+    {
+      "id": "F1",
+      "text": "Framing: historical retrospective of Italy's 2024 European election, not current voting instructions."
+    },
+    {
+      "id": "F2",
+      "text": "Election dates in Italy: 8 and 9 June 2024; seats to elect: 76 members of the European Parliament."
+    },
+    {
+      "id": "F3",
+      "text": "Voting age minimum: 18 years; election system: proportional representation."
+    },
+    {
+      "id": "F4",
+      "text": "Preference rule: one to three preferences within the same list; with two or three preferences, candidates of different sexes."
+    },
+    {
+      "id": "F5",
+      "text": "National electoral threshold: 4%; constituencies: five, assigned by residence."
+    },
+    {
+      "id": "F6",
+      "text": "Voting is not compulsory; it is a civic duty. Assigned polling station is on the voting card; missing card: contact the municipality."
+    }
+  ],
+  "immutable": [
+    "Italia",
+    "Parlamento europeo",
+    "2024",
+    "76",
+    "18",
+    "4%"
+  ]
+}

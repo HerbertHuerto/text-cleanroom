@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+  "language": "Spanish",
+  "tone": "Neutral historical retrospective; preserve all detail, qualifications and register. Not present-day advice or a current status update.",
+  "facts": [
+    {
+      "id": "F1",
+      "text": "Framing: historical account of European Commission announcement on 3 October 2025, not an updated disbursement report."
+    },
+    {
+      "id": "F2",
+      "text": "Disaster: October 2024 floods in Valencia, with more than 230 deaths and extensive infrastructure destruction."
+    },
+    {
+      "id": "F3",
+      "text": "Commission proposed 945 million euros from the EU Solidarity Fund (FSUE) to Parliament and Council; not yet their approval."
+    },
+    {
+      "id": "F4",
+      "text": "Separate measure already approved: reallocation of 645 million euros of cohesion funding through RESTORE; combined headline nearly 1.6 billion euros is not all already paid."
+    },
+    {
+      "id": "F5",
+      "text": "Advance of 100 million euros already paid; remaining FSUE balance payable after Parliament and Council approval, less that advance."
+    },
+    {
+      "id": "F6",
+      "text": "RESTORE permits EU co-financing of up to 95% of eligible costs, not 95% of all losses; progressive payment depends on expenditure."
+    },
+    {
+      "id": "F7",
+      "text": "Supported areas include infrastructure repair, temporary accommodation, cleaning and restarting small and medium-sized businesses."
+    }
+  ],
+  "immutable": [
+    "Comisión Europea",
+    "Valencia",
+    "Parlamento Europeo",
+    "FSUE",
+    "RESTORE",
+    "2025",
+    "2024",
+    "230",
+    "945",
+    "645",
+    "1,6",
+    "100",
+    "95%",
+    "Fondo de Solidaridad de la Unión Europea",
+    "La cifra conjunta, cercana a 1,6 mil millones de euros, no significaba que todo ese importe se hubiera pagado."
+  ]
+}

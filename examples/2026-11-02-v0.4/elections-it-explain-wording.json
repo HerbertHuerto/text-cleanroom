@@ -1,0 +1,59 @@
+{
+  "status": "wording_diagnostics_only",
+  "watermark_status": "not_verified",
+  "semantic_equivalence": "not_verified",
+  "original_sha256": "0e9103b62fcaafd4ca3a307a7a90fde573e230770cf0ea45544d03858a7b34f0",
+  "candidate_sha256": "9907edad9ec2105f38ca3daf17651209f8506d31e92709ec93ea792f1b299518",
+  "normalization": "unicode_word_regex_casefold_punctuation_ignored",
+  "editable_words": {
+    "original": 142,
+    "candidate": 96
+  },
+  "protected_characters": {
+    "original": 34,
+    "candidate": 34
+  },
+  "protected_fraction_original": 0.03494347379239465,
+  "editable_word_count_ratio": 0.676056338028169,
+  "unchanged_editable_word_sequence": false,
+  "shared_windows": {
+    "3": {
+      "original_unique": 128,
+      "candidate_unique": 82,
+      "shared_unique": 35,
+      "original_retained_fraction": 0.2734375,
+      "candidate_copied_fraction": 0.4268292682926829
+    },
+    "5": {
+      "original_unique": 116,
+      "candidate_unique": 72,
+      "shared_unique": 22,
+      "original_retained_fraction": 0.1896551724137931,
+      "candidate_copied_fraction": 0.3055555555555556
+    },
+    "8": {
+      "original_unique": 103,
+      "candidate_unique": 60,
+      "shared_unique": 9,
+      "original_retained_fraction": 0.08737864077669903,
+      "candidate_copied_fraction": 0.15
+    }
+  },
+  "longest_copied_editable_run": {
+    "words": 15,
+    "original_range": [
+      538,
+      632
+    ],
+    "candidate_range": [
+      245,
+      339
+    ],
+    "excerpt": "stessa lista; se le preferenze erano due o tre, dovevano riguardare candidati di sesso diverso",
+    "excerpt_truncated": false
+  },
+  "warnings": [
+    "word_units_are_not_model_tokens",
+    "no_validated_removal_threshold"
+  ]
+}

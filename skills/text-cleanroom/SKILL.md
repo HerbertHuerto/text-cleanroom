@@ -24,6 +24,7 @@ or absence of a statistical watermark. Work only on the user's selected text.
 - **Neutralize (experimental)** when the user asks to remove or disrupt a text
   watermark. Perform the concrete reconstruction workflow in
   [references/neutralize.md](references/neutralize.md), not just an inspection.
+  Its method selection is grounded in [public evidence](references/public-evidence.md).
   This request authorizes a meaning-preserving rewrite, not provider switching,
   deletion of attribution or changes to protected content. If verbatim fidelity
   is also required, explain the conflict before rewriting.
@@ -74,6 +75,7 @@ It does not modify files, run input content or make network calls.
 ```sh
 python3 /path/to/text-cleanroom/scripts/check_text.py inspect original.md
 python3 /path/to/text-cleanroom/scripts/check_text.py compare original.md candidate.md --protect 'Jane Doe'
+python3 /path/to/text-cleanroom/scripts/transformation.py original.md candidate.md --ledger ledger.json
 ```
 
 Use argument arrays or proper shell quoting for user paths and protected strings.
@@ -99,6 +101,14 @@ or `requires_review` (exit 1); neither means semantic or watermark verification.
 Exit 2 is input/usage failure. Missing/invalid JSON, interpreter errors or an
 unknown status mean the check failed to run; never interpret those as approval.
 Inspection lists characters for review, not proof of hidden data or AI authorship.
+The optional transformation helper reports copied editable word sequences and
+protected share, not detection or semantic approval. It handles up to 20,000
+editable words per text; protected regions split windows rather than joining
+unrelated text. More than 10,000 protected-string matches before merging are
+rejected, not silently truncated; select a smaller passage if necessary.
+Use a ledger tied to the original hash for exclusion. Inspect the
+full diff and facts even when overlap is low. Never remove attribution, pad text
+or alter immutable regions to manipulate these measures.
 
 ## Deliver
 

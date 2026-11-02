@@ -4,6 +4,8 @@ Use only for a requested attempt on selected prose. The output is a reconstructe
 candidate plus an integrity review, not a certificate of watermark removal.
 The host agent prepares/reviews the facts; `reconstruct.py` performs generation
 through a separately checked Platform API route. `check_text.py` remains read-only.
+Read [public-evidence.md](public-evidence.md) for method choice and the evidence
+boundary, last checked 2026-11-02. No restricted access is needed to make an attempt.
 
 ## Reconstruct, then verify
 
@@ -23,6 +25,10 @@ through a separately checked Platform API route. `check_text.py` remains read-on
    Do not reduce the ledger to keywords that omit qualifications or relationships.
    Express facts as structured propositions (subject, relation, value, conditions),
    not a copy of the original sentences: a verbatim ledger encourages copying.
+   Run `--dry-run` and inspect its `ledger_wording` report before generation. Long
+   copied editable runs in the ledger warrant rewriting the *ledger* as complete
+   propositions, without dropping context or qualifications; this is not a
+   calibrated watermark threshold. Live runs also save `ledger-wording.json`.
    Give explicit caveats their own entries: "not all paid" is not "none paid",
    and "process initiated" must not drop a separate "completion not established"
    qualification. Protect full institutional names, not only their acronyms.
@@ -34,8 +40,12 @@ through a separately checked Platform API route. `check_text.py` remains read-on
    than editing sentence-by-sentence or replacing words with synonyms. Change
    sentence construction, clause arrangement and paragraph structure where that
    preserves meaning. Keep the requested language, tone, level of detail and
-   logical dependencies. Reinsert immutable islands byte-for-byte when using
-   files. Do not translate or encode the text merely to manufacture differences.
+   logical dependencies. The runner unions overlapping immutable spans, assigns
+   each occurrence a placeholder and requires exactly one use of every placeholder.
+   It reinserts original fragments locally, byte-for-byte in UTF-8, and restores
+   fact-map locators. Missing/duplicated/unknown markers fail the run. This does
+   not verify placement or meaning. Do not translate or encode the text merely
+   to manufacture differences.
    Use `reconstruct.py`, not a new host-agent response. It sends only ledger facts
    and immutable strings, without the original prose or this chat's history.
 4. **Check against the original, not just the ledger.** Run the available helper
@@ -48,18 +58,35 @@ through a separately checked Platform API route. `check_text.py` remains read-on
    candidate is identical or only cosmetically changed, report a limited/no
    reconstruction, not a completed disruption attempt. Wording-change measures
    describe the transformation only; they are not watermark detection scores.
+   Inspect `transformation.json`: it excludes immutable spans, reports 3/5/8-word
+   overlap in both directions, the longest copied editable run, protected share
+   and editable length ratio. Zero overlap is not removal; short or fully protected
+   text may have no measurable windows. The word regex is not a model tokenizer
+   or a language-specific segmenter (especially for unsegmented scripts).
    `no_heuristic_differences` is insufficient in reconstruction mode. Build a
    concise table pairing each original fact (including number-to-entity links,
    conditions and negations) with the matching candidate sentence; also flag
    candidate sentences without support. Read preserved Unicode sequences in
    context: equal counts do not detect a joiner moved inside the wrong word.
-5. **Stop after one reconstruction and necessary fidelity repairs.** A second
-   candidate needs a concrete user reason or relevant detector feedback, not a
-   loop chasing a generic AI score. If meaning cannot be preserved, return the
+5. **Default to one reconstruction and necessary fidelity repairs.** When stronger
+   reconstruction is explicitly requested or inspection finds long copied editable
+   passages, one alternative with `--strategy explain` is available within the
+   authorized API budget. Default `restructure` regroups related propositions;
+   `explain` starts with conditions/limitations before decisions and details. Generate
+   independently from the same original ledger, not from the preceding candidate.
+   Keep both, review both against the original and choose fidelity first, useful
+   reconstruction second. No automatic winner or watermark-efficacy ranking is
+   produced. Do not loop, pad or degrade prose to improve an overlap measure.
+   If meaning cannot be preserved, return the
    limitation and keep the original; do not present the candidate as ready.
    After a repair, recheck the entire candidate: fixing an omission can introduce
    a different scope/negation error. Preserve failed drafts in the experiment
    record instead of counting only the final acceptable version.
+
+Keep the `tone` field about register/audience, not a contradictory old outline;
+the selected strategy supplies the organization instructions. Never protect an
+entire paragraph merely to get clean integrity checks: protected text is preserved,
+not neutralized. If exact fidelity dominates the passage, report that limitation.
 
 The rationale is to replace the original wording and token context, which may
 disrupt a watermark tied to those choices. **This package has not measured that

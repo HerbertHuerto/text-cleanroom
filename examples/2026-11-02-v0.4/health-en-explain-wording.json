@@ -1,0 +1,59 @@
+{
+  "status": "wording_diagnostics_only",
+  "watermark_status": "not_verified",
+  "semantic_equivalence": "not_verified",
+  "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+  "candidate_sha256": "720654e13cb3a82e898d17498a1ce69dd78f7be3fd948de987d1a68ad7e02b23",
+  "normalization": "unicode_word_regex_casefold_punctuation_ignored",
+  "editable_words": {
+    "original": 115,
+    "candidate": 123
+  },
+  "protected_characters": {
+    "original": 240,
+    "candidate": 240
+  },
+  "protected_fraction_original": 0.23809523809523808,
+  "editable_word_count_ratio": 1.0695652173913044,
+  "unchanged_editable_word_sequence": false,
+  "shared_windows": {
+    "3": {
+      "original_unique": 97,
+      "candidate_unique": 102,
+      "shared_unique": 54,
+      "original_retained_fraction": 0.5567010309278351,
+      "candidate_copied_fraction": 0.5294117647058824
+    },
+    "5": {
+      "original_unique": 82,
+      "candidate_unique": 89,
+      "shared_unique": 29,
+      "original_retained_fraction": 0.35365853658536583,
+      "candidate_copied_fraction": 0.3258426966292135
+    },
+    "8": {
+      "original_unique": 65,
+      "candidate_unique": 74,
+      "shared_unique": 9,
+      "original_retained_fraction": 0.13846153846153847,
+      "candidate_copied_fraction": 0.12162162162162163
+    }
+  },
+  "longest_copied_editable_run": {
+    "words": 11,
+    "original_range": [
+      152,
+      230
+    ],
+    "candidate_range": [
+      176,
+      254
+    ],
+    "excerpt": "African countries a public health emergency of international concern under the",
+    "excerpt_truncated": false
+  },
+  "warnings": [
+    "word_units_are_not_model_tokens",
+    "no_validated_removal_threshold"
+  ]
+}

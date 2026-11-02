@@ -1,0 +1,240 @@
+{
+  "scope": "live functional/fidelity smoke, not a watermark benchmark",
+  "date": "2026-11-02",
+  "cases": [
+    {
+      "original_sha256": "0e9103b62fcaafd4ca3a307a7a90fde573e230770cf0ea45544d03858a7b34f0",
+      "candidate_sha256": "5279f4488ecdd716e3d404a20968b500406d003023ca5ec498ed108fa3ac4555",
+      "ledger_sha256": "6bf8a63a53bc7a26ce6b04596cbb2cad0bec7f3d5d5998b320763d789a78fb29",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:28.134780+00:00",
+      "strategy": "restructure",
+      "immutable_island_count": 6,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 739,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1014,
+        "output_tokens_details": {
+          "reasoning_tokens": 367
+        },
+        "total_tokens": 1753
+      },
+      "name": "elections-it-restructure",
+      "status": "no_heuristic_differences",
+      "protected_phrase_changes": [],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/elections-it/original.md"
+    },
+    {
+      "original_sha256": "0e9103b62fcaafd4ca3a307a7a90fde573e230770cf0ea45544d03858a7b34f0",
+      "candidate_sha256": "9907edad9ec2105f38ca3daf17651209f8506d31e92709ec93ea792f1b299518",
+      "ledger_sha256": "6bf8a63a53bc7a26ce6b04596cbb2cad0bec7f3d5d5998b320763d789a78fb29",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:28.428932+00:00",
+      "strategy": "explain",
+      "immutable_island_count": 6,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 752,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1036,
+        "output_tokens_details": {
+          "reasoning_tokens": 378
+        },
+        "total_tokens": 1788
+      },
+      "name": "elections-it-explain",
+      "status": "no_heuristic_differences",
+      "protected_phrase_changes": [],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/elections-it/original.md"
+    },
+    {
+      "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+      "candidate_sha256": "92888a716db545b2d9c52fa94b99f7fdd81b5639bbcdc030b99619f4a49f32e7",
+      "ledger_sha256": "395f8d7a55ae396e2b52ac2ede692b0b1ceaa83e45da36044ad85e0db47426e6",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:28.455614+00:00",
+      "strategy": "restructure",
+      "immutable_island_count": 13,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 1024,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1089,
+        "output_tokens_details": {
+          "reasoning_tokens": 356
+        },
+        "total_tokens": 2113
+      },
+      "name": "health-en-restructure",
+      "status": "no_heuristic_differences",
+      "protected_phrase_changes": [],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/health-en/original.md"
+    },
+    {
+      "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+      "candidate_sha256": "720654e13cb3a82e898d17498a1ce69dd78f7be3fd948de987d1a68ad7e02b23",
+      "ledger_sha256": "395f8d7a55ae396e2b52ac2ede692b0b1ceaa83e45da36044ad85e0db47426e6",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:35.657254+00:00",
+      "strategy": "explain",
+      "immutable_island_count": 13,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 1037,
+        "input_tokens_details": {
+          "cache_write_tokens": 1034,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1263,
+        "output_tokens_details": {
+          "reasoning_tokens": 498
+        },
+        "total_tokens": 2300
+      },
+      "name": "health-en-explain",
+      "status": "no_heuristic_differences",
+      "protected_phrase_changes": [],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/health-en/original.md"
+    },
+    {
+      "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+      "candidate_sha256": "c69b6af23f76d6ae38d26096e27f37c508463cfe6898f1ca6e3af5809363dd34",
+      "ledger_sha256": "d38e40fcc2610af494f428cad16714d7aec125793e86eb6be89deee0a418ddca",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:37.447135+00:00",
+      "strategy": "restructure",
+      "immutable_island_count": 15,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 1060,
+        "input_tokens_details": {
+          "cache_write_tokens": 1057,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1474,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 2534
+      },
+      "name": "floods-es-restructure",
+      "status": "requires_review",
+      "protected_phrase_changes": [
+        {
+          "text": "FSUE",
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/floods-es/original.md"
+    },
+    {
+      "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+      "candidate_sha256": "100525ed156d719e58f3deac5c3918b30fb3dfa54c024d31fd585881c4edd35d",
+      "ledger_sha256": "d38e40fcc2610af494f428cad16714d7aec125793e86eb6be89deee0a418ddca",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:25:35.650927+00:00",
+      "strategy": "explain",
+      "immutable_island_count": 15,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 1073,
+        "input_tokens_details": {
+          "cache_write_tokens": 1070,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1180,
+        "output_tokens_details": {
+          "reasoning_tokens": 221
+        },
+        "total_tokens": 2253
+      },
+      "name": "floods-es-explain",
+      "status": "requires_review",
+      "protected_phrase_changes": [
+        {
+          "text": "FSUE",
+          "before": 1,
+          "after": 2
+        }
+      ],
+      "prompt_revision": "initial-v040",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/floods-es/original.md"
+    },
+    {
+      "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+      "candidate_sha256": "5495648054caaa5b08ba27c447f500cf63bf31c25db4d504af8f9d36dc295862",
+      "ledger_sha256": "d38e40fcc2610af494f428cad16714d7aec125793e86eb6be89deee0a418ddca",
+      "model_returned": "gpt-6-sol",
+      "generated_at": "2026-11-02T00:26:43.777671+00:00",
+      "strategy": "explain",
+      "immutable_island_count": 15,
+      "settings_observed_at": "2026-11-02T00:05:00.249655+00:00",
+      "settings_basis": "operator_observed_off_not_provider_attestation",
+      "usage": {
+        "input_tokens": 1119,
+        "input_tokens_details": {
+          "cache_write_tokens": 1116,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2002,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 3121
+      },
+      "name": "floods-es-explain-repair",
+      "status": "no_heuristic_differences",
+      "protected_phrase_changes": [],
+      "prompt_revision": "conditions-first-and-no-raw-repeats",
+      "project_echo_verified": true,
+      "watermark_status": "not_verified",
+      "semantic_review": "see-review.md",
+      "source": "../2026-11-02/floods-es/original.md"
+    }
+  ],
+  "production_detector_calls": 0,
+  "known_detected_originals": 0,
+  "production_removal_rate": null,
+  "input_tokens": 6804,
+  "output_tokens_including_reasoning": 9058
+}

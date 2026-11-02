@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+  "language": "English",
+  "tone": "Neutral historical retrospective; preserve all detail, qualifications and register. Not present-day advice or a current status update.",
+  "facts": [
+    {
+      "id": "F1",
+      "text": "Framing: account of WHO statement dated 14 August 2024; use historical tense. Original does not explicitly state a present-day emergency status."
+    },
+    {
+      "id": "F2",
+      "text": "WHO Director-General declared the mpox upsurge in the DRC and a growing number of African countries a public health emergency of international concern under IHR (2005), following independent expert advice."
+    },
+    {
+      "id": "F3",
+      "text": "Further spread across Africa and possibly beyond was a risk, not a certainty."
+    },
+    {
+      "id": "F4",
+      "text": "Second mpox PHEIC in two years; previous declaration: July 2022; ended: May 2023 after sustained global decline."
+    },
+    {
+      "id": "F5",
+      "text": "Initial anticipated response funding requirement: US$15 million; already released from the Contingency Fund for Emergencies: US$1.45 million. Do not swap requested and released amounts."
+    },
+    {
+      "id": "F6",
+      "text": "Vaccine Emergency Use Listing process initiated the previous week to accelerate access where national approval was missing and facilitate procurement by Gavi and UNICEF; not a statement that listing had already completed."
+    }
+  ],
+  "immutable": [
+    "WHO",
+    "Democratic Republic of the Congo",
+    "International Health Regulations",
+    "Contingency Fund for Emergencies",
+    "14 August 2024",
+    "2005",
+    "July 2022",
+    "May 2023",
+    "US$15 million",
+    "US$1.45 million",
+    "Gavi",
+    "UNICEF",
+    "Initiating the process did not mean that listing had been completed."
+  ]
+}

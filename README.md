@@ -15,6 +15,9 @@ has been measured for this workflow.
 - An opt-in reconstruction runner pinned to an OpenAI Platform project/API key,
   exact model and recently observed OFF settings; no host-model/provider fallback.
 - A local paired-observation evaluator, not a watermark detector.
+- Exact local reinsertion of immutable fragments using occurrence-specific placeholders.
+- Two explicit reconstruction outlines, plus copied-passage diagnostics excluding
+  protected material; no automatic selection by an unvalidated watermark proxy.
 - No dependencies outside Python's standard library; Python 3.10+ required.
 - No server, hooks, telemetry or automatic repository scanning.
 
@@ -49,6 +52,7 @@ For local checks without an agent:
 ```sh
 python3 skills/text-cleanroom/scripts/check_text.py inspect original.md
 python3 skills/text-cleanroom/scripts/check_text.py compare original.md candidate.md --protect 'Jane Doe'
+python3 skills/text-cleanroom/scripts/transformation.py original.md candidate.md --ledger ledger.json
 python3 -m unittest discover -s tests -v
 ```
 
@@ -59,6 +63,21 @@ ledger payload; oversized inputs are rejected before a paid request. The 1 MiB
 limit above applies only to the read-only inspection/comparison helpers.
 Deliver its reviewed `candidate.md` file unchanged: host regeneration would lose
 the route evidence. A generated fact map still requires independent semantic review.
+The default `--strategy restructure` regroups related facts; optional `--strategy explain`
+provides a conditions-first alternative within an authorized API budget. Each command
+is one request, never an automatic loop. Frozen-fragment placeholders improve byte
+preservation, not watermark removal; their values remain visible to the generator.
+
+`transformation.json` reports 3/5/8-word overlap, longest copied editable passage,
+protected share and length ratio. It has no removal threshold, is not a tokenizer
+or semantic check, and never says a low-overlap candidate is safe to deliver.
+Preflight also checks wording retained in the factual ledger: copying source
+sentences into the ledger defeats the purpose of reconstructing from propositions.
+The [public evidence review](skills/text-cleanroom/references/public-evidence.md)
+explains the implemented method, alternatives and limits as of **2026-11-02**.
+The [v0.4 live functional smoke](examples/2026-11-02-v0.4/README.md) retains seven
+real generations, including two flagged first drafts and their repair. It measures
+execution/fidelity and wording changes, **not production-watermark removal**.
 
 On Windows use `python` if that is your Python 3 command. UTF-8 `.txt`, `.md`, and
 `.markdown` files up to 1 MiB are supported. No document conversion is performed.
@@ -106,7 +125,7 @@ Use the authenticated personal account after confirming `clawhub whoami`:
 ```sh
 clawhub login
 clawhub whoami
-clawhub skill publish ./skills/text-cleanroom --slug text-cleanroom --name 'Text Cleanroom' --version 0.3.0 --categories creative,knowledge --topics text,markdown,editing
+clawhub skill publish ./skills/text-cleanroom --slug text-cleanroom --name 'Text Cleanroom' --version 0.4.0 --categories creative,knowledge --topics text,markdown,editing
 ```
 
 ClawHub publication is separate from pushing this repository to GitHub. A pending
