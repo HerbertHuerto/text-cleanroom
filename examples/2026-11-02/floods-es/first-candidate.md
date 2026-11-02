@@ -1,0 +1,5 @@
+Ya se habían desembolsado 100 millones de euros como anticipo. En cambio, la Comisión Europea había propuesto al Parlamento Europeo y al Consejo una ayuda de 945 millones de euros del FSUE, aún pendiente de su aprobación. El saldo de esa ayuda solo podría abonarse tras dicha aprobación y una vez descontado el anticipo.
+
+Por separado, ya se había aprobado la reasignación de 645 millones de euros de fondos de cohesión mediante RESTORE. La cifra conjunta, cercana a 1,6 mil millones de euros, no representaba dinero ya pagado en su totalidad. RESTORE permitía cofinanciar con fondos de la UE hasta el 95% de los costes subvencionables, no del total de las pérdidas; los pagos serían progresivos y dependerían del gasto.
+
+Este es el marco del anuncio del 3 de octubre de 2025, no un balance actualizado de desembolsos. Respondía a las inundaciones de octubre de 2024 en Valencia, que causaron más de 230 muertes y una extensa destrucción de infraestructuras. Entre las actuaciones respaldadas figuraban la reparación de infraestructuras, el alojamiento temporal, la limpieza y la reactivación de pequeñas y medianas empresas.

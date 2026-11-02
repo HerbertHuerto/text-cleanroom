@@ -1,0 +1,5 @@
+In a statement dated 14 August 2024, the WHO Director-General declared the mpox upsurge in the Democratic Republic of the Congo and a growing number of African countries a public health emergency of international concern under the International Health Regulations (2005). The declaration followed advice from independent experts. Further spread across Africa and possibly beyond was considered a risk, not a certainty.
+
+This was the second such mpox emergency declaration in two years. The previous declaration, made in July 2022, had ended in May 2023 after a sustained global decline. For the initial response, the anticipated funding requirement was US$15 million; US$1.45 million had already been released from the Contingency Fund for Emergencies.
+
+The Vaccine Emergency Use Listing process had been initiated the previous week to accelerate access where national approval was missing and to facilitate procurement by Gavi and UNICEF. Initiating the process did not mean that listing had been completed.

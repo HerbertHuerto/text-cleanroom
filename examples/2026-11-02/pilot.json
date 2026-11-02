@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-02",
+  "model": "gpt-6-sol",
+  "method": "one isolated project; OFF before, ON, OFF after; shuffled case order within structured blocks; not a randomized/fully counterbalanced trial",
+  "sample_manifest": "samples.jsonl",
+  "sample_count": 30,
+  "reconstructions": [
+    {
+      "case": "elections-it",
+      "source": "https://elections.europa.eu/it/how-to-vote/it/",
+      "original_sha256": "0e9103b62fcaafd4ca3a307a7a90fde573e230770cf0ea45544d03858a7b34f0",
+      "candidate_sha256": "8d9100de93b356e5244695abe0c27aecb33f14ba572a8c15d09d723283b0acbc",
+      "original_words": 149,
+      "candidate_words": 102,
+      "original_unique_word_5grams_retained_fraction": 0.1088,
+      "metric_interpretation": "wording overlap only, NOT watermark measurement",
+      "reconstruction_calls": 1
+    },
+    {
+      "case": "health-en",
+      "source": "https://www.who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern",
+      "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+      "candidate_sha256": "8628ab0bd34ae88d353c251dc7f671d91e0cccff442d35f7d9b63083e69bde77",
+      "original_words": 152,
+      "candidate_words": 154,
+      "original_unique_word_5grams_retained_fraction": 0.5855,
+      "metric_interpretation": "wording overlap only, NOT watermark measurement",
+      "reconstruction_calls": 2
+    },
+    {
+      "case": "floods-es",
+      "source": "https://spain.representation.ec.europa.eu/noticias-eventos/noticias-0/casi-1-600-millones-de-euros-de-fondos-de-la-ue-ayudaran-espana-recuperarse-de-las-devastadoras-2025-10-03_es",
+      "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+      "candidate_sha256": "7a3035a086095ba9732917c36fc1cd9c18d9c8f007cd46fc9e075cd50899bcee",
+      "original_words": 192,
+      "candidate_words": 183,
+      "original_unique_word_5grams_retained_fraction": 0.3333,
+      "metric_interpretation": "wording overlap only, NOT watermark measurement",
+      "reconstruction_calls": 3
+    }
+  ],
+  "known_positive_detector_controls": 0,
+  "known_negative_detector_controls": 0,
+  "production_detector_queries": 0,
+  "watermark_removal_rate": null,
+  "production_textgrain_removal": "not_established",
+  "off_on_labels": "operator-observed configuration, not measured signal presence",
+  "protected_working_settings": "organization and Default unchanged; experimental project restored OFF"
+}

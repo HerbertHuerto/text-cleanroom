@@ -1,0 +1,5 @@
+In its 14 August 2024 statement, WHO estimated an initial response funding requirement of US$15 million; US$1.45 million had already been released from the Contingency Fund for Emergencies.
+
+The vaccine Emergency Use Listing process had been initiated the previous week to accelerate access where national approval was missing and to facilitate procurement by Gavi and UNICEF.
+
+Following advice from independent experts, the Director-General declared the mpox upsurge in the Democratic Republic of the Congo and a growing number of African countries a public health emergency of international concern under the International Health Regulations (2005). Further spread across Africa, and possibly beyond, was a risk rather than a certainty. This was the second mpox public health emergency of international concern in two years: the previous declaration, made in July 2022, had ended in May 2023 after a sustained global decline.

@@ -1,0 +1,58 @@
+{
+  "status": "candidate_requires_review",
+  "provider": "openai_platform",
+  "model_requested": "gpt-6-sol",
+  "model_returned": "gpt-6-sol",
+  "original_sha256": "9cd426b58cedff82d331779f4213630aca07008fbbc7bc3b88cf930ecc7a39a6",
+  "candidate_sha256": "7a3035a086095ba9732917c36fc1cd9c18d9c8f007cd46fc9e075cd50899bcee",
+  "generated_at": "2026-11-02T00:06:32.895759+00:00",
+  "settings_basis": "operator_observed_off_not_provider_attestation",
+  "watermark_status": "not_verified",
+  "semantic_check": "not_performed",
+  "usage": {
+    "input_tokens": 830,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1289,
+    "output_tokens_details": {
+      "reasoning_tokens": 711
+    },
+    "total_tokens": 2119
+  },
+  "scope_echo_checked": "exact project matched; canonical org header absent/legacy name, not independently mapped",
+  "privacy_note": "Account identifiers, credentials, response IDs and private route hashes omitted.",
+  "integrity_status": "no_heuristic_differences",
+  "model_generated_locators": [
+    {
+      "fact_id": "F1",
+      "candidate_quote": "El 3 de octubre de 2025 se había anunciado la propuesta como respuesta a las inundaciones"
+    },
+    {
+      "fact_id": "F2",
+      "candidate_quote": "las inundaciones de octubre de 2024 en Valencia, que habían causado más de 230 muertes y una extensa destrucción de infraestructuras"
+    },
+    {
+      "fact_id": "F3",
+      "candidate_quote": "la Comisión Europea había propuesto al Parlamento Europeo y al Consejo de la Unión Europea una ayuda de 945 millones de euros del Fondo de Solidaridad de la Unión Europea (FSUE), cuya aprobación seguía pendiente"
+    },
+    {
+      "fact_id": "F4",
+      "candidate_quote": "Por separado, ya se había aprobado la reasignación de 645 millones de euros de fondos de cohesión mediante RESTORE. La cifra conjunta, cercana a 1,6 mil millones de euros, no significaba que todo ese importe se hubiera pagado."
+    },
+    {
+      "fact_id": "F5",
+      "candidate_quote": "Ya se habían pagado 100 millones de euros como anticipo."
+    },
+    {
+      "fact_id": "F6",
+      "candidate_quote": "RESTORE permitía cofinanciar con fondos de la UE hasta el 95% de los costes subvencionables, no de todas las pérdidas; los pagos se realizaban progresivamente en función del gasto"
+    },
+    {
+      "fact_id": "F7",
+      "candidate_quote": "Entre las actuaciones respaldadas figuraban la reparación de infraestructuras, el alojamiento temporal, la limpieza y la reactivación de pequeñas y medianas empresas."
+    }
+  ],
+  "manual_review_file": "review.md"
+}

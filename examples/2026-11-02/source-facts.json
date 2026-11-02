@@ -1,0 +1,133 @@
+[
+  {
+    "id": "elections-it",
+    "language": "Italian",
+    "date": "2024-06-09",
+    "source": "https://elections.europa.eu/it/how-to-vote/it/",
+    "facts": [
+      {
+        "id": "F1",
+        "text": "Framing: historical retrospective of Italy's 2024 European election, not current voting instructions."
+      },
+      {
+        "id": "F2",
+        "text": "Election dates in Italy: 8 and 9 June 2024; seats to elect: 76 members of the European Parliament."
+      },
+      {
+        "id": "F3",
+        "text": "Voting age minimum: 18 years; election system: proportional representation."
+      },
+      {
+        "id": "F4",
+        "text": "Preference rule: one to three preferences within the same list; with two or three preferences, candidates of different sexes."
+      },
+      {
+        "id": "F5",
+        "text": "National electoral threshold: 4%; constituencies: five, assigned by residence."
+      },
+      {
+        "id": "F6",
+        "text": "Voting is not compulsory; it is a civic duty. Assigned polling station is on the voting card; missing card: contact the municipality."
+      }
+    ],
+    "immutable": [
+      "2024",
+      "76",
+      "18",
+      "4%"
+    ],
+    "tone": "Neutral public-interest archive briefing, about 150 to 190 words. Preserve each supplied fact, uncertainty and procedural stage; do not add facts. Keep every immutable string exactly once. Avoid duplicating numbers. Do not include a title, source URL or present-day advice. Use historical framing."
+  },
+  {
+    "id": "health-en",
+    "language": "English",
+    "date": "2024-08-14",
+    "source": "https://www.who.int/news/item/14-08-2024-who-director-general-declares-mpox-outbreak-a-public-health-emergency-of-international-concern",
+    "facts": [
+      {
+        "id": "F1",
+        "text": "Framing: retrospective of WHO statement dated 14 August 2024; not a claim about present emergency status."
+      },
+      {
+        "id": "F2",
+        "text": "WHO Director-General declared the mpox upsurge in the DRC and a growing number of African countries a public health emergency of international concern under IHR (2005), following independent expert advice."
+      },
+      {
+        "id": "F3",
+        "text": "Further spread across Africa and possibly beyond was a risk, not a certainty."
+      },
+      {
+        "id": "F4",
+        "text": "Second mpox PHEIC in two years; previous declaration: July 2022; ended: May 2023 after sustained global decline."
+      },
+      {
+        "id": "F5",
+        "text": "Initial anticipated response funding requirement: US$15 million; already released from the Contingency Fund for Emergencies: US$1.45 million. Do not swap requested and released amounts."
+      },
+      {
+        "id": "F6",
+        "text": "Vaccine Emergency Use Listing process initiated the previous week to accelerate access where national approval was missing and facilitate procurement by Gavi and UNICEF; not a statement that listing had already completed."
+      }
+    ],
+    "immutable": [
+      "WHO",
+      "2024",
+      "2005",
+      "2022",
+      "2023",
+      "US$15 million",
+      "US$1.45 million",
+      "Gavi",
+      "UNICEF"
+    ],
+    "tone": "Neutral public-interest archive briefing, about 150 to 190 words. Preserve each supplied fact, uncertainty and procedural stage; do not add facts. Keep every immutable string exactly once. Avoid duplicating numbers. Do not include a title, source URL or present-day advice. Use historical framing."
+  },
+  {
+    "id": "floods-es",
+    "language": "Spanish",
+    "date": "2025-10-03",
+    "source": "https://spain.representation.ec.europa.eu/noticias-eventos/noticias-0/casi-1-600-millones-de-euros-de-fondos-de-la-ue-ayudaran-espana-recuperarse-de-las-devastadoras-2025-10-03_es",
+    "facts": [
+      {
+        "id": "F1",
+        "text": "Framing: historical account of European Commission announcement on 3 October 2025, not an updated disbursement report."
+      },
+      {
+        "id": "F2",
+        "text": "Disaster: October 2024 floods in Valencia, with more than 230 deaths and extensive infrastructure destruction."
+      },
+      {
+        "id": "F3",
+        "text": "Commission proposed 945 million euros from the EU Solidarity Fund (FSUE) to Parliament and Council; not yet their approval."
+      },
+      {
+        "id": "F4",
+        "text": "Separate measure already approved: reallocation of 645 million euros of cohesion funding through RESTORE; combined headline nearly 1.6 billion euros is not all already paid."
+      },
+      {
+        "id": "F5",
+        "text": "Advance of 100 million euros already paid; remaining FSUE balance payable after Parliament and Council approval, less that advance."
+      },
+      {
+        "id": "F6",
+        "text": "RESTORE permits EU co-financing of up to 95% of eligible costs, not 95% of all losses; progressive payment depends on expenditure."
+      },
+      {
+        "id": "F7",
+        "text": "Supported areas include infrastructure repair, temporary accommodation, cleaning and restarting small and medium-sized businesses."
+      }
+    ],
+    "immutable": [
+      "2025",
+      "2024",
+      "230",
+      "945",
+      "FSUE",
+      "645",
+      "RESTORE",
+      "100",
+      "95%"
+    ],
+    "tone": "Neutral public-interest archive briefing, about 150 to 190 words. Preserve each supplied fact, uncertainty and procedural stage; do not add facts. Keep every immutable string exactly once. Avoid duplicating numbers. Do not include a title, source URL or present-day advice. Use historical framing."
+  }
+]

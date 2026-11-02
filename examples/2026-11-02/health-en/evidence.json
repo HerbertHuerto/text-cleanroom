@@ -1,0 +1,54 @@
+{
+  "status": "candidate_requires_review",
+  "provider": "openai_platform",
+  "model_requested": "gpt-6-sol",
+  "model_returned": "gpt-6-sol",
+  "original_sha256": "4b03688c12c9b1d4ac7a6d735c9271b991d71f33cdfcc631ee053a8c669562aa",
+  "candidate_sha256": "8628ab0bd34ae88d353c251dc7f671d91e0cccff442d35f7d9b63083e69bde77",
+  "generated_at": "2026-11-02T00:06:07.259434+00:00",
+  "settings_basis": "operator_observed_off_not_provider_attestation",
+  "watermark_status": "not_verified",
+  "semantic_check": "not_performed",
+  "usage": {
+    "input_tokens": 750,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1090,
+    "output_tokens_details": {
+      "reasoning_tokens": 625
+    },
+    "total_tokens": 1840
+  },
+  "scope_echo_checked": "exact project matched; canonical org header absent/legacy name, not independently mapped",
+  "privacy_note": "Account identifiers, credentials, response IDs and private route hashes omitted.",
+  "integrity_status": "no_heuristic_differences",
+  "model_generated_locators": [
+    {
+      "fact_id": "F1",
+      "candidate_quote": "In its 14 August 2024 statement, WHO"
+    },
+    {
+      "fact_id": "F2",
+      "candidate_quote": "Following advice from independent experts, the Director-General had declared the mpox upsurge in the Democratic Republic of the Congo and a growing number of African countries a public health emergency of international concern under the International Health Regulations (2005)."
+    },
+    {
+      "fact_id": "F3",
+      "candidate_quote": "Further spread across Africa, and possibly beyond, was a risk rather than a certainty."
+    },
+    {
+      "fact_id": "F4",
+      "candidate_quote": "This was the second mpox public health emergency of international concern in two years: the previous declaration had been made in July 2022 and ended in May 2023 after a sustained global decline."
+    },
+    {
+      "fact_id": "F5",
+      "candidate_quote": "WHO initially anticipated a response funding requirement of US$15 million, while US$1.45 million had already been released from the Contingency Fund for Emergencies."
+    },
+    {
+      "fact_id": "F6",
+      "candidate_quote": "The vaccine Emergency Use Listing process had been initiated the previous week to accelerate access where national approval was missing and to facilitate procurement by Gavi and UNICEF. Initiating the process did not mean that listing had been completed."
+    }
+  ],
+  "manual_review_file": "review.md"
+}
